@@ -8,10 +8,11 @@ autocmd FileType automake setlocal noexpandtab
 " Set filetype to cpp for vpp files.
 autocmd BufNewFile,BufRead *.vpp set filetype=cpp
 
-colorscheme badwolf   " The badwolf color scheme!
+colorscheme molokai   " The badwolf color scheme!
 syntax enable   " enable syntax processing
 set backspace=2 " enable backspaces over autoindents and stuff. fixes
                 " problems on MacOS
+set term=screen-256color
 set expandtab   " expand tab to spaces
 set tabstop=3   " number of visual spaces per TAB
 set softtabstop=3   " number of spaces in tab when editing
@@ -42,8 +43,6 @@ nnoremap <Down> gj
 " highlight last inserted text
 nnoremap gV `[v`]
 set nojoinspaces  " Disable wide sentence spacing when joining 2 or more lines.
-" The Join command - which calls the join_paragraphs script.
-command -range=% Join <line1>,<line2>!~/scripts/join_paragraphs
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim   "ctrlp plugin
 set runtimepath^=~/.vim/bundle/nerdtree   "NERDtree plugin
